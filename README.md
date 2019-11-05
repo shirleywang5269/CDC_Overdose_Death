@@ -6,12 +6,9 @@ The national rate of Overdose death is 21.7 per 100,000
 
   
 
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
-
-New section   |     More      |         Data |
-And more      | With an escaped '\|'         ||  
-[Prototype table]
+<table>
+<tr>
+<td colspan=3>a  <td colspan=2>b
+<tr>
+<td colspan=1>col1 <td colspan=1>col2 <td colspan=1>col3<td colspan=1>col4 <td colspan=1>col5
+</table>
