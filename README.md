@@ -6,10 +6,12 @@ The national rate of Overdose death is 21.7 per 100,000
 
   
 
-<!--| `git diff` | Show file differences that **haven't been** staged |---| --- | -->
+|             |          Grouping           ||
+First Header  | Second Header | Third Header |
+ ------------ | :-----------: | -----------: |
+Content       |          *Long Cell*        ||
+Content       |   **Cell**    |         Cell |
 
-
-
-| One    | Two | Three | Four    | Five  | Six 
-| -
-| Span <td colspan=3>triple  <td colspan=2>double
+New section   |     More      |         Data |
+And more      | With an escaped '\|'         ||  
+[Prototype table]
