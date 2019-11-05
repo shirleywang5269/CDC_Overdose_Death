@@ -11,4 +11,6 @@ The national rate of Overdose death is 21.7 per 100,000
 <td colspan=3>a  <td colspan=2>b
 <tr>
 <td colspan=1>col1 <td colspan=1>col2 <td colspan=1>col3<td colspan=1>col4 <td colspan=1>col5
+<tr>
+<td colspan=1>col1 <td colspan=1>col2 <td colspan=1>col3<td colspan=1>col4 <td colspan=1>col5
 </table>
