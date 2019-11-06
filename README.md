@@ -49,3 +49,4 @@ The national rate of Overdose death is 21.7 per 100,000
 <td >2017 <td >70,237  <td>21.7<td>46,552 <td>29.1  <td>23,685  <td>14.4
 
 This table was built using [CDC Dataset](https://www.cdc.gov/nchs/data).
+
