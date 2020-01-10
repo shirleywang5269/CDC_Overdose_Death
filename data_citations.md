@@ -14,7 +14,7 @@ Description of dataset goes here.
 ---
 
 ## CDC Death Index:
-1) Mortality Multiple Cause-of-Death data
+Mortality Multiple Cause-of-Death data
 
 The user guide of using each year’s Mortality Multiple Cause-of-Death data is below:
 
