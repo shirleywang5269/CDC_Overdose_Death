@@ -1,0 +1,178 @@
+# Raw Data Citations For GeoSpatial Dataset
+
+---
+
+New entries should follow the following structure:
+
+### Name-of-Dataset
+PATH: {path_to_file_from_root} 
+
+URL: {url_from_download}
+
+Description of dataset goes here.
+
+---
+
+## CDC Death Index:
+1) Mortality Multiple Cause-of-Death data
+
+The user guide of using each year’s Mortality Multiple Cause-of-Death data is below:
+
+https://www.cdc.gov/nchs/nvss/mortality_public_use_data.htm
+
+As the example of the most recent year 2017’s user guide, which named Multiple_Cause_Record_Layout_2017.pdf, it contains two sets 
+
+of data, one is U.S. Data without geospatial information but detailed on each diagnose. 
+
+Another is U.S. Territories Data which includes all county/states/FIPS info. 
+
+PATH: data/raw/
+
+
+
+
+## U.S. Census:
+
+### State/County Intercensal 1999:
+
+**CLEANED PANDAS READY CSV @:** data/clean/CENSUS_COUNTYLEVEL/1999_StateCountyIntercensal.csv
+
+PATH: data/raw/CENSUS_COUNTYLEVEL/1999_StateCountyIntercensal/
+
+URL: https://www.census.gov/data/datasets/time-series/demo/popest/intercensal-1990-2000-state-and-county-characteristics.html
+
+Intercensal State and County Characteristics Population Estimates with 1990-Base Race 
+Groups 
+
+Population Estimates Branch, U.S. Bureau of the Census
+
+There is one file for each of the ten years in the intercensal series 1990-1999.  Each file contains 
+bridged –race estimates of the July 1 resident population by State, county, race (White, Black or 
+African American, American Indian or Alaska Native, Asian or Pacific Islander), age group (< 1 year, 
+1-4 years, 5-9 years, 10-14 years, …, 80-84 years, 85 years and over), sex, and Hispanic origin (not 
+Hispanic or Latino, Hispanic or Latino).  
+
+The dataset format file can be found under stch-intercensal_layout.txt
+
+The raw dataset can be found under stch-icen1999.txt
+
+---
+
+### County Characteristic Intercensal For 2000 Through 2010:
+PATH: data/raw/CENSUS_COUNTYLEVEL/2000-2010_CountyCharacteristicIntercensal/
+
+URL: https://www.census.gov/data/datasets/time-series/demo/popest/intercensal-2000-2010-counties.html
+
+The April 1, 2000 Population Estimates base reflects changes to the Census 2000 population from the Count Question 
+Resolution program and geographic program revisions.
+The original race data from Census 2000 are modified to reclassify the Some Other Race category. 
+This modification is used for all Census Bureau estimates products and is explained in the document 
+entitled "Modified Race Data Summary File Technical Documentation and ASCII Layout" that can be found 
+on the Census Bureau website at http://www.census.gov/popest/research/modified.html.
+The data source for April 1, 2010 is the 2010 Census count. The original race data from the 2010 Census 
+are modified to reclassify the Some Other Race category. 
+For more information see http://www.census.gov/popest/methodology/2000-2010_Intercensal_Estimates_Methodology.pdf.
+The values for July 1, 2010 were produced by applying estimates of change in the population between April 1 
+and July 1 of 2010 to the 2010 Census counts. Further details on this methodology 
+are available at http://www.census.gov/popest/methodology/2000-2010_Intercensal_Estimates_Methodology.pdf.
+
+The raw dataset is contained over a number of text files in the directory.
+
+The documentation for the headers of the data can be found under the file co-est00int-alldata-4-25-13.pdf.
+
+---
+
+### Count Characterisitics Estimates For 2010 Through 2018
+PATH: data/raw/CENSUS_COUNTYLEVEL/2010-2018_CountyCharacteristicEstimates/
+
+URL: https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-detail.html
+
+
+Each year, the United States Census Bureau produces and publishes estimates of the population for the nation, states, 
+counties, state/county equivalents, and Puerto Rico. We estimate the resident population for each year since the most 
+recent decennial census by using measures of population change. The resident population includes all people currently 
+residing in the United States.
+
+With each annual release of population estimates, the Population Estimates program revises and updates the entire time 
+series of estimates from April 1, 2010 to July 1 of the current year, which we refer to as the vintage year. We use the
+term “vintage” to denote an entire time series created with a consistent population starting point and methodology. 
+The release of a new vintage of estimates supersedes any previous series and incorporates the most up-to-date input data
+and methodological improvements.
+
+The population estimates are used for federal funding allocations, as controls for major surveys including the Current
+Population Survey and the American Community Survey, for community development, to aid business planning, and as denominators
+for statistical rates. Overall, our estimates time series from 2000 to 2010 was very accurate, even accounting for ten years
+of population change. The average absolute difference between the final total resident population estimates and 2010 Census
+counts was only about 3.1 percent across all counties.
+
+The documentation for the headers of the data can be found under co-est2018-alldata.pdf.
+
+The raw dataset can be found under the file co-est2018-alldata.csv.
+
+---
+
+### County Business Patterns: 1999-2017
+PATH: data/raw/CENSUS_COUNTYLEVEL/`year`_CountyBusinessPatterns/  
+- where `year` is some year between 1999 and 2017
+
+URL: https://www.census.gov/programs-surveys/cbp/data/datasets.html
+
+This series includes the number of establishments, employment during the week, first quarter payroll, and annual 
+payroll. This data is useful for studying the economic activity of small areas; analyzing economic changes over 
+time; and as a benchmark for other statistical series, surveys, and databases between economic censuses. 
+Businesses use the data for analyzing market potential, measuring the effectiveness of sales and advertising 
+programs, setting sales quotas, and developing budgets. Government agencies use the data for administration and planning.
+
+Each yearly directory contains a formating file called county_layout_`year`.txt.
+
+Each yearly directory contains a raw dataset filed called cbp`year`co.txt.
+
+
+## Other Datasets:
+
+### CDC County Zipcode/Country Cross Reference
+PATH: data/raw/ZIPS_TO_FIPS/
+
+URL: https://wonder.cdc.gov/wonder/sci_data/codes/fips/type_txt/cntyxref.asp
+
+The County Cross Reference File is a product which provides a
+relationship between ZIP+4 codes and Federal Information
+Processing Standard (FIPS) county codes.  The file allows users
+who have assigned ZIP+4 codes to their address files to obtain
+county data at the ZIP+4 level.
+
+The documentation for the dataset is found under the file Zipcode2Fips.txt.
+
+The raw dataset is contained over a number of text files named zipcty{N}.txt.
+
+---
+
+### GEOPANDAS-READY JSON of U.S. County Geometries
+PATH: data/counties.geojson
+
+This dataframe was extracted from plotly's county-choropleth package.
+It containes the GeoPandas data for all counties in the United States 
+uniquely identified along FIPS codes. The geometries can be manipulated using 
+GeoPandas to calculate neighbors, centroids, area, and perimeters of counties.
+
+The extraction was done with the following script:
+
+```clojure
+# Hy
+(import [plotly.figure-factory :as foo])
+
+(setv county-choro foo.-county-choropleth 
+      df (-> (county-choro.-create-us-counties-df 
+                county-choro.st-to-state-name-dict 
+                county-choro.state-to-st-dict)
+             (get 0)))
+             
+(.to-file df "data/counties.geojson" :driver "GeoJSON")
+```
+To import the dataframe using GeoPandas in Python3 use:
+
+```Python
+import geopandas as gp
+
+df = gp.read_file("data/counties.geojson" :driver "GeoJSON")
+```
